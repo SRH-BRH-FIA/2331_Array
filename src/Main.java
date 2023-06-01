@@ -8,6 +8,18 @@ public class Main {
         feld[0] = -13;
     }
 
+    // erste Aufgabe
+    public static void befülleArrayMitZufallszahlen(double[] werte) {
+        for (int i=0; i < werte.length; i++) {
+            werte[i] = Math.random() * 100;
+        }
+    }
+
+    // zweite Aufgabe
+    public static void findeDasMaximumUndGebeEsAus(double[] werte) {
+        // TODO
+    }
+
     // Aufgabe: Mittelwert berechnen und an erster Stelle speichern
     public static void mittelwertBerechnen(double[] werte) {
         //werte.length: gibt die Größe des Arrays an
