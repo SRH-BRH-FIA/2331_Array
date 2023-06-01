@@ -16,7 +16,7 @@ public class Main {
     }
 
     // zweite Aufgabe
-    public static void findeDasMaximumUndGebeEsAus(double[] werte) {
+    public static void findeDasMinimumUndGebeEsAus(double[] werte) {
         // TODO
     }
 
