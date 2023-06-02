@@ -65,6 +65,13 @@ public class Main {
         return neuesArray;
     }
 
+    // alle Werte zwischen min und max fliegen raus!
+    public static double[] werteAusArrayEntfernen(double[] werte,
+                                                  double min,
+                                                  double max) {
+        // TODO
+    }
+
 
     public static void main(String[] args) {
 
