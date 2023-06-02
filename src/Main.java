@@ -17,7 +17,16 @@ public class Main {
 
     // zweite Aufgabe
     public static void findeDasMinimumUndGebeEsAus(double[] werte) {
-        // TODO
+        double kleinsteZahl = werte[0];
+        int indexDerKleinstenZahl = 0;
+        for (int i=1; i < werte.length; i++) {
+            if (werte[i] < kleinsteZahl) {
+                kleinsteZahl = werte[i];
+                indexDerKleinstenZahl = i;
+            }
+        }
+        System.out.println("Das Minimum ist " + kleinsteZahl);
+        System.out.println("im Array an der Stelle " + indexDerKleinstenZahl);
     }
 
     // Aufgabe: Mittelwert berechnen und an erster Stelle speichern
