@@ -90,7 +90,12 @@ public class Main {
     }
 
     public static void ausgabeArray(double[] werte) {
-        // [1, 2, 4]
+        System.out.print("[");
+        for (int i=0; i<werte.length; i++) {
+            if (i > 0) System.out.print(", ");
+            System.out.print(werte[i]);
+        }
+        System.out.println("]");
     }
 
 
@@ -136,17 +141,11 @@ public class Main {
         double[] a = { 3, 48, 99 };
         double[] b = { 4, 32, 55, 78 };
         double[] a_und_b = fasseZweiArraysZusammen(a, b);
-        for (int i=0; i<a_und_b.length; i++) {
-            System.out.print(a_und_b[i] + ", ");
-        }
-        System.out.println();
+        ausgabeArray(a_und_b);
 
         System.out.println("reduziertesArray");
         double[] reduziertesArray = werteAusArrayEntfernen(a_und_b, 30, 50);
-        for (int i=0; i<reduziertesArray.length; i++) {
-            System.out.print(reduziertesArray[i] + ", ");
-        }
-        System.out.println();
+        ausgabeArray(reduziertesArray);
     }
 
 }
