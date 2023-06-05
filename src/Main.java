@@ -69,7 +69,28 @@ public class Main {
     public static double[] werteAusArrayEntfernen(double[] werte,
                                                   double min,
                                                   double max) {
-        // TODO
+        int größeDesNeuenArrays = werte.length;
+        for (int i=0; i< werte.length; i++) {
+            if (werte[i] >= min && werte[i] <= max) {
+                größeDesNeuenArrays--;
+            }
+        }
+
+        double[] neuesArray = new double[ größeDesNeuenArrays ];
+
+        int neuesArrayIndex = 0;
+        for (int i=0; i < werte.length; i++) {
+            if (werte[i] < min || werte[i] > max) {
+                neuesArray[neuesArrayIndex] = werte[i];
+                neuesArrayIndex++;
+            }
+        }
+
+        return neuesArray;
+    }
+
+    public static void ausgabeArray(double[] werte) {
+        // [1, 2, 4]
     }
 
 
@@ -118,6 +139,14 @@ public class Main {
         for (int i=0; i<a_und_b.length; i++) {
             System.out.print(a_und_b[i] + ", ");
         }
+        System.out.println();
+
+        System.out.println("reduziertesArray");
+        double[] reduziertesArray = werteAusArrayEntfernen(a_und_b, 30, 50);
+        for (int i=0; i<reduziertesArray.length; i++) {
+            System.out.print(reduziertesArray[i] + ", ");
+        }
+        System.out.println();
     }
 
 }
